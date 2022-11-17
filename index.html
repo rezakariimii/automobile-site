@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>خودرو</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/Car.js"></script>
+  </head>
+  <body>
+    <section id="nav-bar">
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+              ><img
+                id="logo"
+                src="images/Logo/logo.jpg"
+                alt="logo"
+                class="img-fluid"
+            /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse ml-auto"
+            id="navbarSupportedContent"
+          >           
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link"
+                  >قیمت خودرو
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">خرید خودرو</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">مشخصات خودرو
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">فروش خودرو</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#description">کارشناسی خودرو</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#articles">مقالات</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">تماس با ما</a>
+              </li>
+            </ul>
+            <form>
+              <div class="input-group" dir="ltr">
+                <input
+                  type="search"
+                  class="form-control text-end"
+                  placeholder="نام خودرو"
+                  aria-label="Search input"
+                />
+                <button id="btn-search" type="submit" class="btn">جستجو</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section id="header" class="header show">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <img
+              src="images/Car/BMW.png"
+              class="d-block w-100 img-fluid"
+              alt="car image"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>BMW i8</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="images/Car/bugatti-chiron.png"
+              class="d-block w-100 img-fluid"
+              alt="car image"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Bugatti</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="images/Car/Porsche.png"
+              class="d-block w-100 img-fluid"
+              alt="car image"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Porche</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img
+              src="images/Car/Lambo.png"
+              class="d-block w-100"
+              alt="car image"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lamborghini</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section id="car-logo">
+      <div class="bg-dark py-1">
+        <div class="carousel-logo">
+          <ul class="carousel-logo__list">
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/bentley-logo-1400x800-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/bmw-logo-2020-blue-white-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/Citroen-logo-2009-640x550.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/ford-logo-2017-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo pt-4">
+              <img src="images/car-logo/GMC-logo-2200x600.png" alt="car logo" />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/lamborghini-logo-1000x1100-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/Mercedes-Benz-logo-2011-640x369.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/Peugeot-logo-2010-640x451.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/porsche-logo-2100x1100-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/tesla-logo-2200x2800-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/toyota-logo-2019-3700x1200-show.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/Zarooq-Motors-logo-1024x768.png"
+                alt="car logo"
+              />
+            </li>
+            <li class="carousel-item__logo">
+              <img
+                src="images/car-logo/lamborghini-logo-1000x1100-show.png"
+                alt="car logo"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="overlay">
+        <div class="container">
+            <div class="col-md-12 about-text py-5">
+              <div class="d-flex justify-content-center mb-2">
+              <h4>نظاره گر پیشرفت کسب و کار خود باشید ، وقتی  خان آیتی جزئی از تیم شما می شود</h4>
+              </div>
+              <p class="font-italic mb-4">ما یک تیم از افراد کنجکاو هستیم که عاشق خلق کردن چیزهای جدید اند تجربیاتی در دنیای دیجیتال که بتوانیم تغییرات اساسی و نتایج قابل توجهی ایجاد کنیم.</p>
+              <ul>
+                <li><i class="icofont-check-circled"></i>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در ایجاد کرد.</li>
+                <li><i class="icofont-check-circled"></i>در این صورت می توان امید داشت ارائه راهکارها و شرایط سخت به پایان رسد. </li>
+                <li><i class="icofont-check-circled"></i>طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در فارسی ایجاد کرد.در این صورت می توان امید داشت ارائه راهکارها و شرایط سخت تایپ به پایان رسد.</li>
+            </ul>
+            <p class="mt-4">الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته
+                اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="description">
+      <div class="description1">
+        <div class="row">
+            <div class="image-box">
+              <img src="images/Description/Description1.jpg" alt="car image" class="img-fluid" id="description__img">
+            </div>
+            <div class="content-box">
+              <h4 class=" mb-3">نحوه پیدا کردن خریداران خودرو</h4>
+              <p>راه های مختلفی برای یافتن خریدار وجود دارد، اما یافتن خریداران قابل اعتماد می تواند بسیار سخت تر باشد. به طور سنتی، گزینه های شما برای فروش خودرو به این معنی است که باید با یک خریدار در یک زمان، قابل اعتماد یا غیر قابل اعتماد معامله کنید، اما نه با اتوبان. ما:</p>
+              <ul class="pe-3">
+                <li>با بیش از 5000 فروشنده تایید شده کار کنید</li>
+                <li>وسیله نقلیه خود را در یک فروش آنلاین روزانه قرار دهید</li>
+                <li>اجازه دهید فروشندگان ما پیشنهادات خود را ارائه دهند</li>
+                <li>بهترین پیشنهاد را برای شما بیاورید</li>
+                <li>خودروی خود را بفروشید (یا نفروشید، هرگز الزامی برای فروش وجود ندارد)</li>
+              </ul>
+            </div>
+      </div>
+    </div>
+      <div class="description2 bg-dark text-white">
+        <div class="row">
+            <div class="content-box">
+              <h4 class="mb-3">اینجا هدر دهنده زمان نیست</h4>
+              <p>یکی از بزرگ‌ترین مشکلات پیدا کردن شخصی برای خرید خودروی شما، برخورد با اتلاف وقت بالقوه است. خریداران خصوصی می‌توانند قیمت‌های خوبی برای وسیله نقلیه شما ارائه دهند، اما وقتی ایمیل‌ها، تماس‌ها، قرار ملاقات‌ها، قرار ملاقات‌های احتمالی لغو شده و حتی افرادی که واقعاً قصد ادامه فروش را نداشتند را در نظر بگیرید، این تفاوت در قیمت ممکن است ارزش آن را نداشته باشد. فراموش نکنید که فروش خودرو به صورت خصوصی اغلب به معنای دعوت غریبه ها به خانه شماست. بزرگراه متفاوت است:</p>
+              <ul class="pe-3">
+                <li>ارزش گذاری خودرو به صورت لحظه ای است</li>
+                <li>ماشین شما روز بعد وارد فروش روزانه ما می شود</li>
+                <li>با قیمت فروش در کمتر از 24 ساعت توافق کنید</li>
+                <li>سریع پرداخت کنید - 83٪ از مشتریان در روز جمع آوری خودرو پول دریافت می کنند</li>
+              </ul>
+            </div>
+            <div class="image-box">
+              <img src="images/Description/Description2.jpg" alt="car image" class="img-fluid" id="description__img">
+            </div>
+        </div>
+    </div>
+      <div class="description3">
+        <div class="row">
+            <div class="image-box">
+              <img src="images/Description/Description3.jpg" alt="car image" class="img-fluid" id="description__img">
+            </div>
+            <div class="content-box">
+              <h4 class="mb-3">خریداران خودرو برای هر خودرو</h4>
+              <p>همه ماشین‌های براق و درجه یک را دوست دارند، اما اتوبان در مورد ایجاد بهترین راه برای فروش ماشین شما است، صرف نظر از نوع، مدل یا سن. ممکن است ماشین (یا ون) شما یک نمایشگاه نباشد، اما ما همچنان می‌توانیم شما را با خریدار ارتباط دهیم که از داشتن آن خوشحال می‌شود. حتی اگر ماشین شما غیرقابل تردد باشد، ما می توانیم با شما همکاری کنیم تا ماشین شما را به عنوان ضایعات بفروشیم، بنابراین می توانید از شر یک وسیله نقلیه قدیمی یا از کار افتاده خلاص شوید و همچنان مبلغ زیادی به دست آورید.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="articles" class="bg-dark pb-5">
+      <div class="container">
+        <div class="content py-2">
+          <div class="d-flex justify-content-center py-3">
+           <h3 class="text-white">آخرین خبرها</h3>
+          </div>
+          <div class="card-box">
+            <div class="card">
+              <img src="images/articles/آئودی.png" alt="car picture" class="img-fluid">
+              <div class="card-body">
+                <h4 class="card-title"> آئودی جدیدQ8 e-tron فاش شد: قیمت، مشخصات و تاریخ عرضه</h4>
+                <p>آئودی e-tron به روز شده (که اکنون Q8 e-tron نامیده می شود) رونمایی شده است. باتری بزرگ‌تر، طراحی بهینه‌شده و نسخه جدید SQ8 دارد. برای همه چیزهایی که باید بدانید ادامه مطلب را بخوانید</p>
+              </div>
+              <div class="card-footer">
+                <a href="#">ادامه مطلب</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/articles/BMW.png" alt="car picture" class="img-fluid">
+              <div class="card-body">
+                <h4 class="card-title">ماشین الکتریکی جدید BMW iX1 در حال فروش: قیمت و مشخصات</h4>
+                <p>بی‌ام‌و iX1 جدید هم‌اکنون به فروش می‌رسد و این اولین باری است که می‌توانید X1 را به عنوان یک خودروی تمام برقی تهیه کنید. برای همه چیزهایی که باید بدانید ادامه مطلب را بخوانید.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#">ادامه مطلب</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/articles/BMW X1.png" alt="car picture" class="img-fluid">
+              <div class="card-body">
+                <h4 class="card-title">BMW X1 جدید در حال فروش: قیمت و مشخصات</h4>
+                <p>بی‌ام‌و iX1 جدید هم‌اکنون به فروش می‌رسد و این اولین باری است که می‌توانید X1 را به عنوان یک خودروی تمام برقی تهیه کنید. برای همه چیزهایی که باید بدانید ادامه مطلب را بخوانید.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#">ادامه مطلب</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/articles/Peugeot 408.png" alt="car picture" class="img-fluid">
+              <div class="card-body">
+                <h4 class="card-title">پژو 408 جدید در حال فروش: قیمت و مشخصات</h4>
+                <p>پژو 408 هم اکنون به فروش می رسد. این یک مدل کاملاً جدید برای این برند است و اولین SUV کوپه پژو است. برای همه چیزهایی که باید بدانید ادامه مطلب را بخوانید.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#">ادامه مطلب</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/articles/motorists think.png" alt="car picture" class="img-fluid">
+              <div class="card-body">
+                <h4 class="card-title">اکثر رانندگان فکر می کنند امروز می توانند خودروهای خودران بخرند</h4>
+                <p>علیرغم اینکه چیزی به نام خودروی خودران تجاری موجود نیست، 52 درصد از رانندگان فکر می کنند که در نمایشگاه ها موجود هستند.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#">ادامه مطلب</a>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/articles/Volvo EX90.png" alt="car picture" class="img-fluid">
+              <div class="card-body">
+                <h4 class="card-title">SUV الکتریکی جدید Volvo EX90 فاش شد: قیمت، مشخصات و تاریخ عرضه</h4>
+                <p>ولوو EX90 رونمایی شد. این خودروی شاسی بلند الکتریکی، شیک ترین، قدرتمندترین و پیشرفته ترین خودرویی است که ولوو تا به حال ساخته است. برای جزئیات کامل به ادامه مطلب مراجعه کنید.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#">ادامه مطلب</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer" class="bg-dark text-white">
+      <div class="container">
+        <div class="row py-5">
+          <div class="footer__contact-us">
+            <ul class="contact-us__list">
+              <li class="text-muted">خودرو</li>
+              <li><a href="#">درباره ما</a></li>
+              <li><a href="#">تماس با ما</a></li>
+              <li><a href="#">قوانین و مقررات</a></li>
+              <li><a href="#">انتقاد و پیشنهاد</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact-us">
+            <ul class="cars__list">
+              <li class="text-muted">دسترسی سریع</li>
+              <li><a href="#">قیمت روز خودرو</a></li>
+              <li><a href="#">خرید خودرو</a></li>
+              <li><a href="#">کارشناسی خودرو</a></li>
+              <li><a href="#">خرید اقساطی خودرو</a></li>
+              <li><a href="#">قیمت خودرو صفر</a></li>
+              <li><a href="#">قیمت خودرو داخلی</a></li>
+              <li><a href="#">قیمت خودرو خارجی</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact-us">
+            <h4 class="text-muted">خودرو؛ هم‌راه خرید، هم‌راه فروش
+            </h4>
+            <p>خودرو، همراه مطمئن شما در فرآیند خرید و فروش خودرو‌ست. این مجموعه با تجریه‌ی هزاران همراهی در خرید و با ارائه‌ی خدمات همه جانبه‌ی خودرویی، در مسیر خلق بهترین تجربه‌ی ممکن از خرید و فروش، کنار شماست.
+
+              با نصب اپلیکیشن خودرو، یک دستیار متخصص خودرویی داشته باشید و از خدمات متنوع این شرکت بهره‌مند شوید.</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p class="text-white"> &copy; کلیه حقوق برای سایت خودرو محفوظ است</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+ 
